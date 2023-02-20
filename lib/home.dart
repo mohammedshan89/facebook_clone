@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:socialmedia_facebook/sections/status_section.dart';
 import 'package:socialmedia_facebook/widgets/app_bar_button.dart';
+import 'package:socialmedia_facebook/widgets/header_button_section.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 253, 253, 253),
+          backgroundColor: Colors.white,
           elevation: 0,
           actions: [
             AppBarButton(buttonIcon: Icons.search,buttonAction: () => print("serach button pressed"),),
@@ -23,8 +24,11 @@ class Home extends StatelessWidget {
           ),
         ),
         body: ListView(
-          children: const[
-            StatusSection()
+          children: [
+            const StatusSection(),
+            Divider(thickness: 1,color: Colors.grey[300],),
+            HeaderButtonSection(),
+            Divider(thickness: 10, color: Colors.grey[300],)
           ],
         ),
       ),
