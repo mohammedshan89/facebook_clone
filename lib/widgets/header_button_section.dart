@@ -19,6 +19,7 @@ class HeaderButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     Widget verticalDivider = VerticalDivider(
       thickness: 1,
       color: Colors.grey[300],

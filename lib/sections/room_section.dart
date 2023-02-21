@@ -14,15 +14,15 @@ class RoomSection extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         children: [
           createRoomButoon(),
-          Avatar(displayImage: mohanlal),
-          Avatar(displayImage: mammooty),
-          Avatar(displayImage: raj),
-          Avatar(displayImage: mohanlal),
-          Avatar(displayImage: mammooty),
-          Avatar(displayImage: raj),
-          Avatar(displayImage: mohanlal),
-          Avatar(displayImage: mammooty),
-          Avatar(displayImage: raj)
+          Avatar(displayImage: mohanlal,displayStatus: true),
+          Avatar(displayImage: mammooty, displayStatus: true),
+          Avatar(displayImage: raj, displayStatus: true),
+          Avatar(displayImage: mohanlal, displayStatus: true),
+          Avatar(displayImage: mammooty, displayStatus: true),
+          Avatar(displayImage: raj, displayStatus: true),
+          Avatar(displayImage: mohanlal, displayStatus: true),
+          Avatar(displayImage: mammooty, displayStatus: true),
+          Avatar(displayImage: raj, displayStatus: true)
         ],
       ),
     );
