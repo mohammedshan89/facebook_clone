@@ -1,7 +1,7 @@
 //Avatars
-String mammooty = "assets/avatar/mammooty.jpg";
+String mammooty = "assets/avatar/mamooty.jpg";
 String mohanlal = "assets/avatar/mohanlal.jpg";
-String raj = "assets/avatar/prithivi.jpg";
+String raj = "assets/avatar/prthivi.jpg";
 
 
 
