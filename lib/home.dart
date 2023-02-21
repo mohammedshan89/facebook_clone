@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:socialmedia_facebook/sections/room_section.dart';
 import 'package:socialmedia_facebook/sections/status_section.dart';
 import 'package:socialmedia_facebook/widgets/app_bar_button.dart';
 import 'package:socialmedia_facebook/widgets/header_button_section.dart';
@@ -27,8 +28,9 @@ class Home extends StatelessWidget {
           children: [
             const StatusSection(),
             Divider(thickness: 1,color: Colors.grey[300],),
-            HeaderButtonSection(),
-            Divider(thickness: 10, color: Colors.grey[300],)
+            const HeaderButtonSection(),
+            Divider(thickness: 10, color: Colors.grey[300],),
+            const RoomSection()
           ],
         ),
       ),
