@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class HeaderButtonSection extends StatelessWidget {
   const HeaderButtonSection({super.key});
@@ -19,7 +19,7 @@ class HeaderButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      Widget verticalDivider = VerticalDivider(
+    Widget verticalDivider = VerticalDivider(
       thickness: 1,
       color: Colors.grey[300],
     );
