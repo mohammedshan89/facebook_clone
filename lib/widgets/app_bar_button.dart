@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppBarButton extends StatelessWidget {
-  @required final IconData? buttonIcon;
-  @required final void Function()? buttonAction;
-
-    const AppBarButton({super.key, this.buttonIcon, this.buttonAction});
+   final IconData? buttonIcon;
+   final void Function()? buttonAction;
+    final Color iconColor;
+    const AppBarButton({super.key, required this.buttonIcon,required this.buttonAction, this.iconColor = Colors.black});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class AppBarButton extends StatelessWidget {
         onPressed: buttonAction,
         icon: Icon(
           buttonIcon,
-          color: Colors.black,
+          color: iconColor,
           size: 25,
         ),
       ),
