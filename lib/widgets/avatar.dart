@@ -8,7 +8,8 @@ class Avatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
+    return Stack(
+      children: [
       Container(
         padding: const EdgeInsets.only(left: 4, right: 4),
         child: ClipRRect(
@@ -20,7 +21,7 @@ class Avatar extends StatelessWidget {
           ),
         ),
       ),
-      displayStatus == true
+      displayStatus 
           ? Positioned(
               right: 1,
               bottom: 0,
