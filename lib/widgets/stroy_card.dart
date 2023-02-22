@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:socialmedia_facebook/assets.dart';
 import 'package:socialmedia_facebook/widgets/app_bar_button.dart';
+import 'package:socialmedia_facebook/widgets/avatar.dart';
 
 class StoryCard extends StatelessWidget {
-  const StoryCard({super.key});
+  final String labelText;
+  final String avatar;
+  final String story;
+  final bool createButtonstaus;
+  final bool borderStatus;
+  const StoryCard(
+      {super.key,
+      required this.labelText,
+      required this.avatar,
+      required this.story,
+      this.createButtonstaus = false,
+      this.borderStatus = false
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +25,7 @@ class StoryCard extends StatelessWidget {
       width: 150,
       decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(raj),
+            image: AssetImage(story),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(15)),
@@ -23,18 +34,19 @@ class StoryCard extends StatelessWidget {
           Positioned(
             left: 5,
             top: 5,
-            child: AppBarButton(
+            child: createButtonstaus ? AppBarButton(
               buttonIcon: Icons.add,
               iconColor: Colors.blue,
               buttonAction: () => print("add button clicked"),
-            ),
+            ) : Avatar(displayImage: avatar
+            , displayStatus: false,borderStatus: borderStatus),
           ),
-          const Positioned(
+           Positioned(
               left: 20,
               bottom: 15,
               child: Text(
-                "Add To Story",
-                style: TextStyle(
+                labelText,
+                style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 16),
