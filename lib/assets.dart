@@ -8,6 +8,6 @@ String raj = "assets/avatar/prthivi.jpg";
 //posts
 
 String mammPost = "assets/posts/mammooty_post.jpg";
-String mohnPost = "assets/posts/mammooty_post.jpg";
-String rajPost = "assets/posts/mammooty_post.jpg";
+String mohnPost = "assets/posts/mohanlal_post.jpg";
+String rajPost = "assets/posts/prithvi_post.jpg";
 

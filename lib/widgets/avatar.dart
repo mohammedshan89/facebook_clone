@@ -3,15 +3,24 @@ import 'package:flutter/material.dart';
 class Avatar extends StatelessWidget {
   final String displayImage;
   final bool displayStatus;
+  final bool borderStatus;
   const Avatar(
-      {super.key, required this.displayImage, required this.displayStatus});
+      {super.key,
+      required this.displayImage,
+      required this.displayStatus,
+      this.borderStatus = false});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
+    return Stack(children: [
       Container(
         padding: const EdgeInsets.only(left: 4, right: 4),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: borderStatus
+              ? Border.all(color: Colors.blueAccent, width: 2)
+              :const Border(),
+        ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(100),
           child: Image.asset(
@@ -21,7 +30,7 @@ class Avatar extends StatelessWidget {
           ),
         ),
       ),
-      displayStatus 
+      displayStatus
           ? Positioned(
               right: 1,
               bottom: 0,
